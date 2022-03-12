@@ -41,3 +41,12 @@ body {
   border: 1px solid;
   background-color: #ffffff;
 }
+
+/* Example groups */
+.example-group p {
+  margin-bottom: 0;
+}
+
+.example-group__heading {
+  font-weight: 600;
+}
