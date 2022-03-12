@@ -1,0 +1,43 @@
+:root {
+  /* Corresponds to landscape A4 */
+  --page-width: 297mm;
+  --page-height: 210mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* A4 styles taken from: https://stackoverflow.com/a/16650459/2480017 */
+@page {
+  size: A4 landscape;
+  margin: 0;
+}
+
+@media print {
+  html,
+  body {
+    width: var(--page-width);
+    height: var(--page-height);
+  }
+
+  .page {
+    margin: 0;
+  }
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  width: var(--page-width);
+  height: var(--page-height);
+  margin: 10px;
+  padding: 10mm;
+  border: 1px solid;
+  background-color: #ffffff;
+}
