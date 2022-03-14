@@ -16,8 +16,7 @@ Dette kan så printes ut med `print(navn)`.
 
 Lag et lite intervju og skriv ut svarene på slutten.
 
-For eksempel:
-
+For eksempel: \
 Maskin: Hva heter du?\
 Person: Nils\
 Maskin: Du heter Nils
