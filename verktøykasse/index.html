@@ -309,15 +309,18 @@ if været == "sol":
             <p>
               Det er også mulig å kjøre kode hvis påstanden er usant (dvs. hvis
               den evalureres til <code>False</code>). Til dette bruker vi
-              <code>else</code>-nøkkelordet:
+              <code>elif</code> (til andre påstander) og
+              <code>else</code> nøkkelord:
             </p>
 
             <pre><code>været = "regn"
   
 if været == "sol":
     print("Nå kan vi spise is")
+elif været == "regn":
+    print("Nå er det lurt med paraply")
 else:
-    print("Nå er det lurt med paraply!")</code></pre>
+    print("Jeg vet ikke hvordan er været!")</code></pre>
           </div>
         </section>
 
