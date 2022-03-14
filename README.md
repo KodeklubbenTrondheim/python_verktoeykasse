@@ -1,3 +1,3 @@
-# Python Cheatsheet
+# Python Verktøykasse
 
-En nyttig cheatsheet som dekker de grunnelegende konseptene innom Python.
+En nyttig verktøykasse som dekker de grunnelegende konseptene innom Python.
