@@ -131,7 +131,7 @@ header h1 {
 .topics {
   display: grid;
   grid-template-rows: masonry;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   grid-gap: var(--padding);
 
   /* transform: scale(0.5);
