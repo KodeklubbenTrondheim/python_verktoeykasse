@@ -4,56 +4,76 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Python Cheatsheet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./vendor/prism.css" />
     <link rel="stylesheet" href="./cheatsheet.css" />
   </head>
   <body class="language-python">
     <div class="page">
-      <div class="title">
+      <header>
         <h1>Python Cheatsheet</h1>
-      </div>
+        <h1 class="kodeklubben-logo">
+          kode<span class="green">klubben</span>[<span class="yellow"
+            >trondheim</span
+          >]<span class="green">_</span>
+        </h1>
+      </header>
 
-      <section class="topic">
-        <h3>Matte</h3>
-        <p>Python kan brukes som en vanlig kalkulator:</p>
+      <div class="topics">
+        <!-- Matte -->
+        <section class="topic">
+          <h3 class="topic__heading">Matte</h3>
+          <div class="topic__content">
+            <p>
+              Python kan brukes som en<br />
+              vanlig kalkulator:
+            </p>
 
-        <div class="example-group">
-          <p>
-            <span class="example-group__heading">Plus:</span>
-            <code>2 + 2</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Minus:</span>
-            <code>3 - 2</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Gange:</span>
-            <code>3 * 3</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Dele:</span>
-            <code>3 / 3</code>
-          </p>
-        </div>
+            <div class="example-group">
+              <p>
+                <span class="example-group__heading">Plus:</span>
+                <code>2 + 2</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Minus:</span>
+                <code>3 - 2</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Gange:</span>
+                <code>3 * 3</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Dele:</span>
+                <code>3 / 3</code>
+              </p>
+            </div>
 
-        <p>Vi kan også kombinere operatorer:</p>
-        <code>2 + 3 - 1 * 2</code>
+            <p>Vi kan også kombinere operatorer:</p>
+            <code>2 + 3 - 1 * 2</code>
 
-        <p>Dette er det samme som:</p>
-        <code>2 + 3 - (1 * 2)</code>
-      </section>
+            <p>Dette er det samme som:</p>
+            <code>2 + 3 - (1 * 2)</code>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h3>Kommentarer</h3>
-        <p>
-          Ofte ønsker vi å forklare koden vår. Sånne forklaringer kalles for
-          kommentarer, og lages ved å bruke <code>#</code> eller
-          <code>"""</code>:
-        </p>
-        <pre><code># Jeg er en kommentar!
-
+        <!-- Kommentarer -->
+        <section class="topic">
+          <h3 class="topic__heading">Kommentarer</h3>
+          <div class="topic__content">
+            <p>
+              Ofte ønsker vi å forklare koden vår. Sånne forklaringer kalles for
+              kommentarer, og lages ved å bruke <code>#</code> eller
+              <code>"""</code>:
+            </p>
+            <pre><code># Jeg er en kommentar!
+    
 print(10) # Kommentarer kan også skrives ved siden av kode.
-
+  
 """
 Jeg er også en kommentar.
 Men fordi jeg ble laget med tre apostrof, kan jeg
@@ -61,267 +81,349 @@ spenne over flere
 linjer.
 """</code></pre>
 
-        Vi kan bruke hvilke tegn vi ønsker i kommentarer. Selv om de inneholder
-        gyldig Python-kode, blir ikke den koden kjørt.
-      </section>
+            <p>
+              Vi kan bruke hvilke tegn vi ønsker i kommentarer. Selv om de
+              inneholder gyldig Python-kode, blir ikke koden kjørt.
+            </p>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h3>Boolere</h3>
-        <p>
-          Med Boolere kan vi representere om noe i vårt program er sant eller
-          usant:
-        </p>
+        <!-- Boolere -->
+        <section class="topic">
+          <h3 class="topic__heading">Boolere</h3>
+          <div class="topic__content">
+            <p>
+              Med Boolere kan vi representere om noe i<br />
+              vårt program er sant eller usant:
+            </p>
 
-        <h4>And</h4>
-        <p><code>True and True</code> &rarr; <code>True</code></p>
-        <p><code>True and False</code> &rarr; <code>False</code></p>
-        <p><code>False and False</code> &rarr; <code>False</code></p>
+            <div class="truth-table">
+              <div class="truth-table-section">
+                <h4>And</h4>
+                <p><code>True and True</code> &rarr; <code>True</code></p>
+                <p><code>True and False</code> &rarr; <code>False</code></p>
+                <p><code>False and False</code> &rarr; <code>False</code></p>
+              </div>
 
-        <h4>Eller</h4>
-        <p><code>True or True</code> &rarr; <code>True</code></p>
-        <p><code>True or False</code> &rarr; <code>True</code></p>
-        <p><code>False or False</code> &rarr; <code>False</code></p>
+              <div class="truth-table-section">
+                <h4>Eller</h4>
+                <p><code>True or True</code> &rarr; <code>True</code></p>
+                <p><code>True or False</code> &rarr; <code>True</code></p>
+                <p><code>False or False</code> &rarr; <code>False</code></p>
+              </div>
 
-        <h4>Ikke</h4>
-        <p><code>not True</code> &rarr; <code>False</code></p>
-        <p><code>not False</code> &rarr; <code>True</code></p>
+              <div class="truth-table-section">
+                <h4>Ikke</h4>
+                <p><code>not True</code> &rarr; <code>False</code></p>
+                <p><code>not False</code> &rarr; <code>True</code></p>
+              </div>
 
-        <h4>Likhet (==)</h4>
-        <p><code>True == True</code> &rarr; <code>True</code></p>
-        <p><code>True == False</code> &rarr; <code>False</code></p>
-        <p><code>"Hei" == "Hei"</code> &rarr; <code>True</code></p>
-        <p><code>(2 + 2) == 5</code> &rarr; <code>False</code></p>
+              <div class="truth-table-section">
+                <h4>Likhet (==)</h4>
+                <p><code>True == True</code> &rarr; <code>True</code></p>
+                <p><code>True == False</code> &rarr; <code>False</code></p>
+                <p><code>"Hei" == "Hei"</code> &rarr; <code>True</code></p>
+                <p><code>(2 + 2) == 5</code> &rarr; <code>False</code></p>
+              </div>
 
-        <h4>Ulikhet (!=)</h4>
-        <p><code>True != True</code> &rarr; <code>False</code></p>
-        <p><code>True != False</code> &rarr; <code>True</code></p>
-        <p><code>"Hei" != "Hei"</code> &rarr; <code>False</code></p>
-        <p><code>(2 + 2) != 5</code> &rarr; <code>True</code></p>
-      </section>
+              <div class="truth-table-section">
+                <h4>Ulikhet (!=)</h4>
+                <p><code>True != True</code> &rarr; <code>False</code></p>
+                <p><code>True != False</code> &rarr; <code>True</code></p>
+                <p><code>"Hei" != "Hei"</code> &rarr; <code>False</code></p>
+                <p><code>(2 + 2) != 5</code> &rarr; <code>True</code></p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h3>Print & Input</h3>
-        <p>Med print-funksjonen kan vi skrive til skjermen:</p>
+        <!-- Printing -->
+        <section class="topic">
+          <h3 class="topic__heading">Print & Input</h3>
+          <div class="topic__content">
+            <p>Med print-funksjonen kan vi skrive til skjermen:</p>
 
-        <pre><code>print("Hei computer")
+            <pre><code>print("Hei computer")
 print(123)</code></pre>
 
-        <p>
-          Input-funksjonen lar oss hente tekst fra de som bruker programmet:
-        </p>
-        <pre><code>name = input("Hva heter du?")
+            <p>
+              Input-funksjonen lar oss hente tekst fra de som bruker programmet:
+            </p>
+            <pre><code>name = input("Hva heter du?")
 ...Brukeren skriver...
 print(name) &rarr; Det brukeren skrev blir nå printet</code></pre>
 
-        <p>Teksten blir alltid lest som streng:</p>
-        <pre><code>favoritt_tall = input("Hva er ditt favoritt tall?")
-print(favoritt_tall) &rarr; "8"</code></pre>
+            <p>Teksten blir alltid lest som streng:</p>
+            <pre><code>favoritt_tall = input("Hva er ditt favoritt tall?")
+  print(favoritt_tall) &rarr; "8"</code></pre>
 
-        <p>
-          Hvis vi trenger et tall, eller en andre type, kan vi bruke spesielle
-          funksjoner som forvandler verdier:
-        </p>
+            <p>
+              Hvis vi trenger et tall, eller en andre type, kan vi bruke
+              spesielle funksjoner som forvandler verdier:
+            </p>
 
-        <div class="example-group">
-          <p>
-            <span class="example-group__heading">Lage tall:</span>
-            <code>int("8")</code> &rarr; <code>8</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Lage desimaltall:</span>
-            <code>float("8.5")</code> &rarr; <code>8.5</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Lage streng:</span>
-            <code>str(8)</code> &rarr; <code>"8"</code>
-          </p>
-          <p>
-            <span class="example-group__heading">Lage boolsk:</span>
-            <code>int("true")</code> &rarr; <code>True</code>
-          </p>
-        </div>
-      </section>
+            <div class="example-group">
+              <p>
+                <span class="example-group__heading">Lage tall:</span>
+                <code>int("8")</code> &rarr; <code>8</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Lage desimaltall:</span>
+                <code>float("8.5")</code> &rarr; <code>8.5</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Lage streng:</span>
+                <code>str(8)</code> &rarr; <code>"8"</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Lage boolsk:</span>
+                <code>int("true")</code> &rarr; <code>True</code>
+              </p>
+            </div>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h3>Strenger</h3>
+        <!-- Strenger -->
+        <section class="topic">
+          <h3 class="topic__heading">Strenger</h3>
+          <div class="topic__content">
+            <p>Strenger er ord og setninger, og lages ved å bruke "":</p>
+            <pre><code>"Jeg er en streng"</code></pre>
 
-        <p>Strenger er ord og setninger, og lages ved å bruke "":</p>
-        <pre><code>"Jeg er en streng"</code></pre>
+            <h4>Finne lengden på en streng:</h4>
+            <pre><code>len("Hei") == 3</code></pre>
 
-        <h4>Finne lengden på en streng:</h4>
-        <pre><code>len("Hei") == 3</code></pre>
+            <h4>Gjør strengen større:</h4>
+            <pre><code>"hei".upper() == "HEI"</code></pre>
 
-        <h4>Gjør strengen større:</h4>
-        <pre><code>"hei".upper() == "HEI"</code></pre>
+            <h4>Eller mindre:</h4>
+            <pre><code>"HEI".lower() == "hei"</code></pre>
 
-        <h4>Eller mindre:</h4>
-        <pre><code>"HEI".lower() == "hei"</code></pre>
+            <h4>Sette sammen strenger med pluss:</h4>
+            <pre><code>"Kake " + "er deilig" == "Kake er deilig"</code></pre>
 
-        <h4>Sette sammen strenger med pluss:</h4>
-        <pre><code>"Kake " + "er deilig" == "Kake er deilig"</code></pre>
+            <h4>Vi kan også gange strenger med tall:</h4>
+            <pre><code>"Na" * 5 == "NaNaNaNaNa"</code></pre>
+          </div>
+        </section>
 
-        <h4>Vi kan også gange strenger med tall:</h4>
-        <pre><code>"Na" * 5 == "NaNaNaNaNa"</code></pre>
-      </section>
+        <!-- Variabler -->
+        <section class="topic">
+          <h3 class="topic__heading">Variabler</h3>
+          <div class="topic__content">
+            <p>
+              Med variabler kan vi gi et navn til verdier. Vi bruker
+              <code>=</code> for å koble en verdi med et navn. Ikke forvirre det
+              med <code>==</code>!
+            </p>
 
-      <section class="topic">
-        <h3>Variabler</h3>
+            <pre><code>min_bursdag = "06/03/2010"</code></pre>
 
-        <p>
-          Med variabler kan vi gi et navn til verdier. Vi bruker
-          <code>=</code> for å koble en verdi med et navn. Ikke forvirre det med
-          <code>==</code>!
-        </p>
-
-        <pre><code>min_bursdag = "06/03/2010"</code></pre>
-
-        <p>
-          Etter at en variabel er blitt deklarert, kan den brukes når som helst,
-          akkurat som et "rå" verdi:
-        </p>
-        <pre><code>melding = "hei"
+            <p>
+              Etter at en variabel er blitt deklarert, kan den brukes når som
+              helst, akkurat som et "rå" verdi:
+            </p>
+            <pre><code>melding = "hei"
 name = "Jonas"
 print(melding.title() + " " + name) &rarr; "Hei Jonas"</code></pre>
 
-        <p>
-          De er også nyttige når vi vil gjenbruke et verdi i flere
-          programområder:
-        </p>
-        <pre><code>dag = "Tirsdag"
-print("Programmeringskurset holdes på " + dag)
-print(dag + " er ukas beste dag!") &rarr; "Tirsdag er ukas beste dag!"</code></pre>
+            <p>
+              De er også nyttige når vi vil gjenbruke et verdi i flere
+              programområder:
+            </p>
+            <pre><code>dag = "Tirsdag"
+  print("Programmeringskurset holdes på " + dag)
+  print(dag + " er ukas beste dag!") &rarr; "Tirsdag er ukas beste dag!"</code></pre>
 
-        <p>Vi kan også tilordne dem på nytt:</p>
-        <pre><code>poeng = 5
-...Etter en stund i et dataspill...
-poeng = poeng + 1
-print(poeng) &rarr; 6</code></pre>
-      </section>
+            <p>Vi kan også tilordne dem på nytt:</p>
+            <pre><code>poeng = 5
+  ...Etter en stund i et dataspill...
+  poeng = poeng + 1
+  print(poeng) &rarr; 6</code></pre>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h4>Lister</h4>
-        <p>Lister bruker vi for å samle flere verdier sammen i et struktur:</p>
-        <pre><code>dager = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"]</code></pre>
+        <!-- Lister -->
+        <section class="topic">
+          <h3 class="topic__heading">Lister</h3>
+          <div class="topic__content">
+            <p>
+              Lister bruker vi for å samle flere verdier sammen i et struktur:
+            </p>
+            <pre><code>dager = ["Mandag", "Tirsdag", "Onsdag", "Torsdag", "Fredag", "Lørdag", "Søndag"]</code></pre>
 
-        <h4>Lage en tom liste:</h4>
-        <pre><code>tom_list = []</code></pre>
+            <h4>Lage en tom liste:</h4>
+            <pre><code>tom_list = []</code></pre>
 
-        <h4>Finne lengden på en liste:</h4>
-        <pre><code>len([]) == 0
+            <h4>Finne lengden på en liste:</h4>
+            <pre><code>len([]) == 0
 len(["epler", "bananaer", "pærer"]) == 3</code></pre>
 
-        <h4>Legge til en verdi:</h4>
-        <pre><code>frukter = ["epler", "bananaer", "pærer"]
+            <h4>Legge til en verdi:</h4>
+            <pre><code> frukter = ["epler", "bananaer", "pærer"]
 frukter.append("appelsiner")
 print(frukter) &rarr; ["epler", "bananaer", "pærer", "appelsiner"]</code></pre>
 
-        <h4>Finne en verdi på et bestemt sted:</h4>
-        <pre><code>frukter = ["epler", "bananaer", "pærer"]
+            <h4>Finne en verdi på et bestemt sted:</h4>
+            <pre><code>frukter = ["epler", "bananaer", "pærer"]
 frukter[0] == "epler"
 frukter[1] == "bananaer"
 frukter[2] == "pærer"</code></pre>
-        <p>(Merk at vi teller fra null)</p>
+            <p>(Merk at vi teller fra null)</p>
 
-        <h4>Erstatte en verdi:</h4>
-        <pre><code>frukter = ["epler", "bananaer", "pærer"]
-frukter[1] = "jordbær"
-print(frukter) -> ["epler", "jordbær", "pærer"]</code></pre>
-        <p>(Merk at vi bruker <code>=</code> istedenfor <code>==</code>)</p>
-      </section>
+            <h4>Erstatte en verdi:</h4>
+            <pre><code>frukter = ["epler", "bananaer", "pærer"]
+  frukter[1] = "jordbær"
+  print(frukter) -> ["epler", "jordbær", "pærer"]</code></pre>
+            <p>(Merk at vi bruker <code>=</code> istedenfor <code>==</code>)</p>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h3>If-setninger</h3>
-        <p>
-          If-setninger lar programmene våre gjør forskellige ting avhengig av en
-          kondisjon. Syntaksen til if-setninger står slik:
-        </p>
-        <pre><code>if &lt;KONDISJON&gt;:
+        <!-- If-setninger -->
+        <section class="topic topic--if-setninger">
+          <h3 class="topic__heading">If-setninger</h3>
+          <div class="topic__content">
+            <p>
+              If-setninger lar programmene våre gjør forskellige ting avhengig
+              av en kondisjon. Syntaksen til if-setninger står slik:
+            </p>
+            <pre><code>if &lt;KONDISJON&gt;:
     &lt;Koden å kjøre hvis kondisjonen er True&gt;</code></pre>
 
-        For eksempel:
-        <pre><code>været = "sol"
-
+            For eksempel:
+            <pre><code>været = "sol"
+  
 if været == "sol":
     print("Nå kan vi spise is")</code></pre>
 
-        <p>
-          Siden <code>været</code> variabelen inneholder <code>"sol"</code>, er
-          kondisjonen <code>været == "sol"</code> sant. Derfor blir koden kjørt.
-          Her er Boolere-sekjsonen veldig nyttig!
-        </p>
+            <p>
+              Siden <code>været</code> variabelen inneholder <code>"sol"</code>,
+              er kondisjonen <code>været == "sol"</code> sant. Derfor blir koden
+              kjørt. Her er Boolere-sekjsonen veldig nyttig!
+            </p>
 
-        <p>
-          Det er også mulig å kjøre kode hvis kondisjonen er usant (dvs. hvis
-          den evalureres til <code>False</code>). Til dette bruker vi
-          <code>else</code>-nøkkelordet:
-        </p>
+            <p>
+              Det er også mulig å kjøre kode hvis kondisjonen er usant (dvs.
+              hvis den evalureres til <code>False</code>). Til dette bruker vi
+              <code>else</code>-nøkkelordet:
+            </p>
 
-        <pre><code>været = "regn"
-
+            <pre><code>været = "regn"
+  
 if været == "sol":
     print("Nå kan vi spise is")
 else:
     print("Nå er det lurt med paraply!")</code></pre>
-      </section>
+          </div>
+        </section>
 
-      <section class="topic">
-        <h4>For-løkker</h4>
-        <p>
-          Når vi vil gjøre ting et bestemt antall ganger, uten å måtte gjenta
-          koden vår, kan vi bruke for-løkker. Disse går gjennom en sekvens (som
-          en range eller en liste) og gjenter koden for hver valuta i sekvensen.
-        </p>
+        <!-- For-løkker -->
+        <section class="topic">
+          <h3 class="topic__heading">For-løkker</h3>
+          <div class="topic__content">
+            <p>
+              Når vi vil gjøre ting et bestemt antall ganger, uten å måtte
+              gjenta koden vår,<br />kan vi bruke for-løkker. Syntaksen ser sånn
+              ut:
+            </p>
 
-        <p>
-          Etter hver løkk går programmet tilbake til den første linjen i løkket.
-          Løkket slutter når den siste sekvensdelen blir nådd.
-        </p>
+            <pre><code>for &lt;VARIABEL&gt; in &lt;SEKVENS&gt;:
+    """...Gjenta koden som skrives i blokken
+    for hver valuata i sekvensen..."""</code></pre>
 
-        <h4>Gjenta <i>n</i>-ganger:</h4>
-        <pre><code>for i in range(9):
-    print(i)</code></pre>
+            <p>
+              Etter hver løkk går programmet tilbake til den første linjen i
+              løkket.<br />Løkket slutter når den siste sekvensdelen blir nådd.
+            </p>
 
-        <h4>Løkke gjennom en liste:</h4>
-        <pre><code>for frukt in ["epler", "bananaer", "pærer"]:
-    print(frukt)</code></pre>
-      </section>
+            <h4>Gjenta <i>n</i>-ganger:</h4>
+            <pre><code>for i in range(9):
+      print(i)</code></pre>
 
-      <section class="topic">
-        <h4>While-løkker</h4>
-        <p>
-          Disse brukes for å gjenta kode når vi ikke vet hvor mange ganger koden
-          bør gjentas.
-        </p>
+            <h4>Løkke gjennom en liste:</h4>
+            <pre><code>for frukt in ["epler", "bananaer", "pærer"]:
+      print(frukt)</code></pre>
+          </div>
+        </section>
 
-        <p>
-          Den viktigste delen er ekspressionen etter "while". # Så lenge
-          experessionen evalueres til sant (<code>True</code>), skal løkken
-          fortsette.
-        </p>
+        <!-- While-løkker -->
+        <section class="topic">
+          <h3 class="topic__heading">While-løkker</h3>
+          <div class="topic__content">
+            <p>
+              Disse brukes for å gjenta kode når vi ikke vet hvor mange ganger
+              koden bør gjentas.
+            </p>
 
-        <p>For eksempel, denne løkken kommer aldri til å slutte:</p>
-        <pre><code>while True:
+            <p>
+              Den viktigste delen er ekspressionen etter <code>while</code>. Så
+              lenge ekspressionen evalueres til sant (<code>True</code>), skal
+              løkken fortsette.
+            </p>
+
+            <p>For eksempel, denne løkken kommer aldri til å slutte:</p>
+            <pre><code>while True:
     print("Jeg skal printes ut i evighet")</code></pre>
 
-        <p>Mens denne while-løkken printer tall fra 0 til 9:</p>
-        <pre><code>x = 0
-while x < 10:
+            <p>Mens denne printer tall fra 0 til 9:</p>
+            <pre><code>x = 0
+while x &lt; 10:
     print(x)
     x += 1</code></pre>
-        <p>Kan du sammenligne den med den tilhørende for-løkken?</p>
+            <p>Kan du sammenligne den med den tilhørende for-løkken?</p>
 
-        <p>
-          Når blir julematen ferdig? Hva skjer hvis <code>and</code>'en endres
-          til <code>or</code>?
-        </p>
-        <pre><code>ribben_er_ferdig = False
+            <p>
+              Når blir julematen ferdig? Hva skjer hvis <code>and</code>'en
+              endres til <code>or</code>?
+            </p>
+            <pre><code>ribben_er_ferdig = False
 potetene_er_ferdige = False
-
+  
 while not ribben_er_ferdig and not potenene_er_ferdige:
     print("Julematen er ikke ferdig ennå!")</code></pre>
-      </section>
+          </div>
+        </section>
+
+        <section class="topic">
+          <h3 class="topic__heading">Dictionaries</h3>
+          <div class="topic__content">
+            <p>
+              Dictionaries er en struktur som assosierer en "nøkkel" med en
+              valuata:
+            </p>
+
+            <pre><code>{
+    "navn": "Ola Nordmann",
+    "kjønn": "kvinne",
+    "født": "2010",
+}</code></pre>
+            <p>
+              De er veldig nyttige når vi vil samle forskellige datapunkter som
+              handler om én ting.
+            </p>
+            <p>Nøkkelene og valuatene kan være hva som helst!</p>
+
+            <h4>Lage en tom dictionary:</h4>
+            <pre><code>{}</code></pre>
+
+            <h4>Få tilgang til en valuata:</h4>
+            <pre><code>min_dict = {"navn": "Ola"}
+print(min_dict["navn"])</code></pre>
+
+            <h4>Erstatte en valuata</h4>
+            <pre><code>min_dict = {"navn": "Ola"}
+min_dict["navn"] = "Jonas"</code></pre>
+
+            <h4>Legge til en valuata</h4>
+            <pre><code>min_dict = {"navn": "Ola"}
+min_dict["alder"] = 11</code></pre>
+          </div>
+        </section>
+      </div>
     </div>
 
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="./vendor/prism.js"></script>
+    <script src="./cheatsheet.js"></script>
   </body>
 </html>

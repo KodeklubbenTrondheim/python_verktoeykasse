@@ -2,15 +2,39 @@
   /* Corresponds to landscape A4 */
   --page-width: 297mm;
   --page-height: 210mm;
+
+  --border-radius: 50px;
+  --padding: 5mm;
+
+  --topic-border-radius: 10px;
 }
+
+/* Setup */
+/* =========================================== */
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  /* font-size: 10px; */
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #222121;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
 /* A4 styles taken from: https://stackoverflow.com/a/16650459/2480017 */
 @page {
-  size: A4 landscape;
+  size: A4;
   margin: 0;
 }
 
@@ -22,31 +46,120 @@
   }
 
   .page {
-    margin: 0;
+    margin: 0 !important;
+    box-shadow: none !important;
   }
 }
 
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
+pre {
+  background: #ffffffbf !important;
+  border-radius: var(--topic-border-radius);
+  /* overflow: visible !important; */
+}
+
+code {
+  font-family: "Fira Code", "Consolas", monospace !important;
+  background: #ffffffbf !important;
+  padding: 5px !important;
+}
+
+p:last-child {
+  margin-bottom: 0;
 }
 
 .page {
   width: var(--page-width);
-  height: var(--page-height);
+  /* height: var(--page-height); */
   margin: 10px;
-  padding: 10mm;
-  border: 1px solid;
+  padding: var(--padding);
   background-color: #ffffff;
+  font-family: roboto, sans-serif;
+  box-shadow: 0px 0px 10px -2px #0000002b;
+  margin: var(--padding) auto;
+}
+
+/* Heading */
+/* =========================================== */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--padding);
+  font-size: 15px;
+
+  width: 100%;
+  height: 15mm;
+  background-color: #ddf1ff;
+  border-radius: var(--border-radius);
+
+  margin-bottom: var(--padding);
+}
+
+header h1 {
+  margin: 0;
+}
+
+.kodeklubben-logo {
+  font-family: monospace;
+  font-size: 1.25em;
+  color: #222121;
+}
+
+.kodeklubben-logo .yellow {
+  color: #ae7f24;
+}
+
+.kodeklubben-logo .green {
+  color: #068406;
 }
 
 /* Example groups */
+/* =========================================== */
+
 .example-group p {
   margin-bottom: 0;
 }
 
 .example-group__heading {
   font-weight: 600;
+}
+
+/* Topics */
+/* =========================================== */
+
+.topics {
+  display: grid;
+  grid-template-rows: masonry;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: var(--padding);
+
+  /* transform: scale(0.5);
+  position: absolute;
+  top: -435px;
+  left: -335px; */
+}
+
+.topic {
+  background-color: rgba(58, 241, 42, 0.08);
+  border-radius: var(--topic-border-radius);
+  /* width: fit-content; */
+}
+
+.topic__heading {
+  margin: 0;
+  background-color: #acf0c6;
+  padding: calc(var(--padding) / 2);
+
+  border-top-left-radius: var(--topic-border-radius);
+  border-top-right-radius: var(--topic-border-radius);
+}
+
+.topic__content {
+  padding: var(--padding);
+  /* padding-top: 0; */
+}
+
+.topic--if-setninger {
+  grid-column: 2;
 }
