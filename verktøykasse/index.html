@@ -29,10 +29,7 @@
         <section class="topic">
           <h3 class="topic__heading">Matte</h3>
           <div class="topic__content">
-            <p>
-              Python kan brukes som en<br />
-              vanlig kalkulator:
-            </p>
+            <p>Python kan brukes som en vanlig kalkulator:</p>
 
             <div class="example-group">
               <p>
@@ -50,6 +47,10 @@
               <p>
                 <span class="example-group__heading">Dele:</span>
                 <code>3 / 3</code>
+              </p>
+              <p>
+                <span class="example-group__heading">Potens:</span>
+                <code>2 ** 2</code>
               </p>
             </div>
 
@@ -89,18 +90,18 @@ linjer.
           </div>
         </section>
 
-        <!-- Boolere -->
+        <!-- Booleans -->
         <section class="topic">
           <h3 class="topic__heading">Boolske verdier</h3>
           <div class="topic__content">
             <p>
-              Med Boolere kan vi representere om noe i vårt program<br />er sant
-              eller usant:
+              Med boolske verdier kan vi representere om noe i vårt program<br />er
+              sant eller usant:
             </p>
 
             <div class="truth-table">
               <div class="truth-table-section">
-                <h4>And</h4>
+                <h4>Og</h4>
                 <p><code>True and True</code> &rarr; <code>True</code></p>
                 <p><code>True and False</code> &rarr; <code>False</code></p>
                 <p><code>False and False</code> &rarr; <code>False</code></p>
@@ -120,7 +121,7 @@ linjer.
               </div>
 
               <div class="truth-table-section">
-                <h4>Likhet (==)</h4>
+                <h4>Likhet (<code>==</code>)</h4>
                 <p><code>True == True</code> &rarr; <code>True</code></p>
                 <p><code>True == False</code> &rarr; <code>False</code></p>
                 <p><code>"Hei" == "Hei"</code> &rarr; <code>True</code></p>
@@ -128,7 +129,7 @@ linjer.
               </div>
 
               <div class="truth-table-section">
-                <h4>Ulikhet (!=)</h4>
+                <h4>Ulikhet (<code>!=</code>)</h4>
                 <p><code>True != True</code> &rarr; <code>False</code></p>
                 <p><code>True != False</code> &rarr; <code>True</code></p>
                 <p><code>"Hei" != "Hei"</code> &rarr; <code>False</code></p>
@@ -177,7 +178,7 @@ print(ditt_tall) &rarr; "8"</code></pre>
                 <code>str(8)</code> &rarr; <code>"8"</code>
               </p>
               <p>
-                <span class="example-group__heading">Lage boolsk:</span>
+                <span class="example-group__heading">Lage Boolean:</span>
                 <code>int("true")</code> &rarr; <code>True</code>
               </p>
             </div>
@@ -222,7 +223,7 @@ print(ditt_tall) &rarr; "8"</code></pre>
 
             <p>
               Etter at en variabel er blitt deklarert, kan den brukes når som
-              helst, akkurat som et "rå" verdi:
+              helst, akkurat som et "rått" verdi:
             </p>
             <pre><code>melding = "hei"
 name = "Jonas"
@@ -234,9 +235,9 @@ print(melding.title() + " " + name) &rarr; "Hei Jonas"</code></pre>
             </p>
             <pre><code>dag = "Tirsdag"
 print("Programmeringskurset holdes på " + dag)
-print(dag + " er ukas beste dag!") &rarr; "Tirsdag er ukas beste dag!"</code></pre>
-
-            <p>Vi kan også tilordne dem på nytt:</p>
+print(dag + " er ukas beste dag!") &rarr;
+"Tirsdag er ukas beste dag!"</code></pre>
+            <p>Vi kan også sette dem på nytt:</p>
             <pre><code>poeng = 5
 ...Etter en stund i et dataspill...
 poeng = poeng + 1
@@ -272,13 +273,13 @@ print(frukter) &rarr; ["epler", "bananaer",
 frukter[0] == "epler"
 frukter[1] == "bananaer"
 frukter[2] == "pærer"</code></pre>
-            <p>(Merk at vi teller fra null)</p>
+            <p>Merk at vi teller fra null!</p>
 
             <h4>Erstatte en verdi:</h4>
             <pre><code>frukter = ["epler", "bananaer", "pærer"]
 frukter[1] = "jordbær"
 print(frukter) -> ["epler", "jordbær", "pærer"]</code></pre>
-            <p>(Merk at vi bruker <code>=</code> istedenfor <code>==</code>)</p>
+            <p>Merk at vi bruker <code>=</code> istedenfor <code>==</code>.</p>
           </div>
         </section>
 
@@ -326,8 +327,7 @@ else:
           <div class="topic__content">
             <p>
               Når vi vil gjøre ting et bestemt antall ganger, uten å måtte
-              gjenta koden vår,<br />kan vi bruke for-løkker. Syntaksen ser sånn
-              ut:
+              gjenta koden vår, kan vi bruke for-løkker. Syntaksen ser sånn ut:
             </p>
 
             <pre><code>for &lt;VARIABEL&gt; in &lt;SEKVENS&gt;:
@@ -336,7 +336,7 @@ else:
 
             <p>
               Etter hver løkk går programmet tilbake til den første linjen i
-              løkket.<br />Løkket slutter når den siste sekvensdelen blir nådd.
+              løkket.<br />Løkken slutter når den siste sekvensdelen blir nådd.
             </p>
 
             <h4>Gjenta <i>n</i>-ganger:</h4>
@@ -354,7 +354,7 @@ else:
           <h3 class="topic__heading">While-løkker</h3>
           <div class="topic__content">
             <p>
-              Disse brukes for å gjenta kode når vi ikke vet hvor mange ganger
+              Disse brukes for å gjenta koden når vi ikke vet hvor mange ganger
               koden bør gjentas.
             </p>
 
@@ -389,18 +389,23 @@ not potenene_er_ferdige:
         </section>
 
         <section class="topic">
-          <h3 class="topic__heading">Dictionaries</h3>
+          <h3 class="topic__heading">Dictionary</h3>
           <div class="topic__content">
             <p>
-              Dictionaries er en struktur som assosierer en "nøkkel" med en
-              verdi:
+              Dictionary er en struktur som assosierer en "nøkkel" med en verdi:
             </p>
 
             <pre><code>{
-    "navn": "Ola Nordmann",
+    "navn": "Ola",
     "kjønn": "kvinne",
     "født": "2010",
 }</code></pre>
+            <p>
+              (I dette eksempelet er <code>"navn"</code>, <code>"kjønn"</code>,
+              og <code>"født"</code> nøkklene; og <code>"Ola"</code>,
+              <code>"kvinne"</code>, og <code>"2010"</code> verdiene.)
+            </p>
+
             <p>
               De er veldig nyttige når vi vil samle forskellige datapunkter som
               handler om én ting.
@@ -420,7 +425,8 @@ min_dict["navn"] = "Jonas"</code></pre>
 
             <h4>Legge til en verdi</h4>
             <pre><code>min_dict = {"navn": "Ola"}
-min_dict["alder"] = 11</code></pre>
+min_dict["alder"] = 11
+print(min_dict["alder"]) &rarr; 11</code></pre>
           </div>
         </section>
       </div>

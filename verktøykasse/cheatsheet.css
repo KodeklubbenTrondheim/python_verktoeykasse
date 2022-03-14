@@ -26,6 +26,11 @@ body {
   margin: 0;
   padding: 0;
   color: #222121;
+  font-variant-ligatures: none;
+}
+
+code[class*="language-"] {
+  text-shadow: none !important;
 }
 
 p:first-child {
