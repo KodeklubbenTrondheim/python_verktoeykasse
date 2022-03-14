@@ -1,3 +1,5 @@
+## Beskrivelse
+
 _Vanskelighetsgrad: Enkel_
 
 La oss printe en ku som ser slik ut:
@@ -16,9 +18,13 @@ For å printe den første linjen kan man skrive:
 print("^__^")
 ```
 
-Prøv å printe resten av kua!
+## Oppgave
+
+Print ut hele kua.
 
 <br/>
+
+## Løsningsforslag
 
 <details>
   <summary>Klikk her for løsningsforslag</summary>
