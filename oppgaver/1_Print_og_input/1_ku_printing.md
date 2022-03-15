@@ -20,7 +20,7 @@ print("^__^")
 
 ## Oppgave
 
-Print ut hele kua.
+Print ut hele kua 🐄
 
 <br/>
 
