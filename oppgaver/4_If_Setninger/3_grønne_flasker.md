@@ -22,7 +22,7 @@ Kan du skrive et program som skrives ut hele sangen?
 <details>
   <summary>Klikk her for løsningsforslag</summary>
 
-```
+```python
 tallord = {
     1: "Ett",
     2: "To",
