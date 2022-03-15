@@ -5,8 +5,10 @@ Velkommen til pythonkurs! På denne github-siden kan du finne oppgaver og en ver
 * [Oppgaver](https://github.com/KodeklubbenTrondheim/pythonkurs/tree/main/oppgaver)
 * [Verktøykasse](https://kodeklubbentrondheim.github.io/pythonkurs/)
 
+<br/>
+<br/>
 
-## For utvikling
+# For utvikling
 
 ### Python Verktøykasse
 
