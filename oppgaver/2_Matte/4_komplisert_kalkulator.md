@@ -29,7 +29,7 @@ print("Svar:", svar)
 <details>
   <summary>Klikk her for løsningsforslag</summary>
 
-```elixir
+```python
 regnestykke = input("Skriv inn regnestykket: ")
 komponenter = regnestykke.split(" ")
 tall1 = int(komponenter[0])
