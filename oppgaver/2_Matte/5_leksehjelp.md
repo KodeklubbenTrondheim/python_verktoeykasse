@@ -22,7 +22,7 @@ Bruk Python for å printe løsningene til disse matteoppgavene:
 2. 2 x 9 = 18
 3. 83739 - 20304 = 63435
 4. 9820 ÷ 4 = 2455
-5. 500 + 50 ÷ 10 + 1 = 50
+5. (500 + 50) ÷ (10 + 1) = 50
 6. 35<sup>3</sup> = 42875
 
 ## Løsningsforslag
